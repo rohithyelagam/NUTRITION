@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nutrition Check</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+      *{
+        padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+      }
+      html{
+        scroll-behavior: smooth;
+      }
+      .nav-link{
+        color: rgb(0, 204, 0);
+      }
+      .nav-link:hover{
+        color: crimson;
+     transition: 0.3s;
+      }
+      .nav-item{
+     color: rgb(147, 255, 51);
+     font-weight: 600;
+     padding-left: 40px;
+      }
+      .btn0{
+        height: 53px;
+        width: 130px;
+        outline: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: all 0.4s;
+        background-color: rgb(255, 51, 129);
+      }
+      .btn0:hover{
+        background: rgb(0,0,0);
+        transition: all 0.4s;
+      }
+      .btn1{
+        height: 53px;
+        width: 130px;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid rgb(255, 51, 129);
+        color: rgb(255, 51, 129);
+        transition: all 0.4s;
+       
+      }
+      .btn1:hover{
+        background-color: rgb(0,0,0);
+        transition: all 0.4s;
+        color: white;
+        border: none;
+        outline: none;
+      }
+      /*================================ main section =========================*/
+      .main{
+        background: url(https://baggout.com/wp-content/uploads/2022/05/1-8.jpeg);
+        background-size: cover;
+        min-height: 95vh;
+        width: 100%;
+      }
+      .main h1{
+        font-size: 4rem;
+        font-weight: 800;
+        color: whitesmoke;
+      }
+      .btn2{
+        height: 70px;
+        width: 25%;
+        background-color: rgb(51, 149, 255);
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.4s;
+      }
+      .btn2:hover{
+        background-color: rgb(0, 0, 0);
+        transition: all 0.4s;
+      }
+
+      /*------------------- about us -----------------*/
+      #about{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          padding: 20px;
+          margin-bottom: 50px;
+      }
+      .container-fluid h1{
+        font-weight: 600;
+        font-size: 3rem;
+        color: green;
+      }
+      #pic{
+          display: flex;
+      }
+      #pic img{
+          width: 575px;
+          height: 400px;
+      }
+      #abt{
+          display: flex;
+          flex-direction: column;
+          text-align: justify;
+          padding: 10px;
+      }
+      #abt h2{
+          font-size: 2rem;
+          margin-bottom: 20px;
+          text-align: center;
+      }
+      #abt p{
+        font-size: 1.5rem;
+        font-family: geneva;
+      }
+
+
+      /*---------------------- contact us -------------------------*/
+      #contact{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          background-color: rgb(160,160,160);
+          color: white;
+          padding: 20px;
+      }
+      .form{
+          display: flex;
+          flex-direction: column;
+          box-sizing: border-box;
+          align-items: center;
+          margin: 20px 0px;
+      }
+      .input{
+          padding: 12px;
+          margin: 15px;
+          width: 30%;
+          border: none;
+          outline: none;
+      }
+      #msg{
+          width: 20%;
+          padding: 10px;
+          margin: 15px;
+          border: none;
+          outline: none;
+      }
+      #send{
+          padding: 10px;
+          width: 10%;
+          margin: 40px;
+          border: none;
+          outline: none;
+      }
+      #send:hover{
+          cursor: pointer;
+          box-shadow: 0 0 10px white;
+      }
+      /*---------------- footer--------------------*/
+      .footer-basic {
+        padding:40px 0;
+        background-color:#ffffff;
+        color:#4b4c4d;
+      }
+      .footer-basic ul {
+        padding:0;
+        list-style:none;
+        text-align:center;
+        font-size:18px;
+        line-height:1.6;
+        margin-bottom:0;
+      }
+      .footer-basic li {
+        padding:0 10px;
+      }
+      .footer-basic ul a {
+        color:inherit;
+        text-decoration:none;
+        opacity:0.8;
+      }
+      .footer-basic ul a:hover {
+        opacity:1;
+      }
+      .footer-basic .social {
+        text-align:center;
+        padding-bottom:25px;
+      }
+      .footer-basic .social > a {
+        font-size:24px;
+        width:40px;
+        height:40px;
+        line-height:40px;
+        display:inline-block;
+        text-align:center;
+        border-radius:50%;
+        border:1px solid #ccc;
+        margin:0 8px;
+        color:inherit;
+        opacity:0.75;
+      }
+      .footer-basic .social > a:hover {
+        opacity:0.9;
+      }
+      .footer-basic .copyright {
+        margin-top:15px;
+        text-align:center;
+        font-size:13px;
+        color:#aaa;
+        margin-bottom:0;
+      }
+    </style>
+  </head>
+
+
+  <body>
+    <a href="/">
+    <nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <a class="navbar-brand" href="#"><img src="https://images.squarespace-cdn.com/content/v1/54723ecbe4b0b303c50e4f1e/1587143597095-T9B5UZ07WF5AC2JTL8BV/eNRG+nutrition+check-up.jpg?format=2500w" width="120" height="120" alt="logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav m-auto mb-2 mb-lg-0">&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <li class="nav-item">
+          <a class="nav-link"href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about py-5">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact">Contact</a>
+        </li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <li>
+          <button class="btn0" style="border-radius: 12px;"><a href="/register" style="color: inherit;">Register</a></button>
+        </li>&ensp;&ensp;&ensp;&ensp;
+        <li>
+          <button class="btn1 mx-4" style="border-radius: 12px;"><a href="/login" style="color: inherit;">Login</a></button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <!--------------------- main section------------>
+  <section class="main py-5">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1>Nutrition checking !<br>know what you eat</h1><br>
+
+          <button class="btn2 mt-5"><a href="https://post.healthline.com/wp-content/uploads/2020/08/The_Fat-Soluble_Vitamins_A_D_E_and_K-732x549-thumbnail-1-732x549.jpg" style="color: inherit;">Check here!</a></button>
+        </div>
+      </div>  
+    </div>
+  </section>
+  <!-------------------------about us---------------->
+  <section id="about py-5">
+    <div class="container-fluid py-5">
+      <h1>About</h1><br>
+      <div id="pic">
+            <img src="https://e0.pxfuel.com/wallpapers/627/998/desktop-wallpaper-you-are-what-you-eat-phone-made-on-canva-eat-food-thumbnail.jpg" alt="a pic of old man with vegetable">
+            <div id="abt">
+                <h2>Know what you eat!</h2><br>
+                <p>Have you ever thought, how many calories you would gain by consuming 100grams of dark chocolate. It is 546cal !!!</p>
+                <p>Whether you are trying to lose weight, gain weight, or maintain your weight, having a basic understanding of how many calories your body requires can help you figure out how many calories to consume. Come with us, we will help you...</p>
+            </div>
+      </div>
+    </div>
+
+  </section>
+  </section>
+  <section id="contact">
+        <h1 class="headings" style="color: black;">Contact Us</h1>
+        <form action="" class="form">
+            <input type="text" name="name" class="input" placeholder="Name">
+            <input type="email" name="email" class="input" placeholder="Email Address*">
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Comment"></textarea>
+            <input type="submit" value="SEND" id="send">
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+<!--------------------------------------------footer------------------------------------------------------------->
+<footer>
+  <div class="footer-basic">
+    <footer>
+        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-google"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Home</a></li>
+            <li class="list-inline-item"><a href="#about py-5">About</a></li>
+            <li class="list-inline-item"><a href="#contact">Contact</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Nutrition Check © 2022</p>
+    </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</footer>
+    </a>
+  </body>
+</html>
